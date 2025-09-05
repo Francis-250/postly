@@ -8,9 +8,9 @@ export default function Navbar() {
 
   return (
     <header className="flex justify-between items-center py-4 px-4 sm:px-6 md:px-8 lg:px-12 bg-white sticky top-0 z-50">
-      <h1 className="font-bold text-2xl text-blue-600 tracking-tight">
+      <Link to="/" className="font-bold text-2xl text-blue-600 tracking-tight">
         POSTLY
-      </h1>
+      </Link>
 
       <nav className="hidden md:flex gap-8 items-center">
         {NavLinks.map((item, i) => (
