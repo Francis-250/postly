@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { RiArrowRightSFill } from "react-icons/ri";
 import { HomeContext } from "../context/HomeContext";
 
@@ -23,6 +23,7 @@ const services = [
 
 export default function Sidebar() {
   const { blogData } = useContext(HomeContext);
+  const [isClicked, setIsClicked] = useState(services);
 
   return (
     <div className="hidden md:block max-w-[25vw]">
@@ -80,7 +81,9 @@ export default function Sidebar() {
                     <p className="capitalize">
                       the power of story telling in branding
                     </p>
-                    <p className=" text-sm text-[#366489] ">by Leon Irakarama</p>
+                    <p className=" text-sm text-[#366489] ">
+                      by Leon Irakarama
+                    </p>
                   </div>
                 </div>
               );
@@ -96,11 +99,17 @@ export default function Sidebar() {
             {services.map(({ name, id, isClicked }) => {
               return (
                 <div
+                  key={id}
+                  onClick={() =>
+                    setIsClicked((prev) => {
+                      return { ...prev, isClicked: !prev };
+                    })
+                  }
                   className={`${
                     isClicked
                       ? "bg-[#366489] text-white"
                       : "bg-[#d3d9dd] text-[#1b2224]"
-                  }  px-4 py-1.5 rounded-full`}
+                  }  px-4 py-1.5 rounded-full `}
                 >
                   {name}
                 </div>
