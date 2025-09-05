@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -10,7 +11,8 @@ import ViewPost from "./pages/admin/ViewPost";
 
 function App() {
   return (
-    <>
+    <div className="p-3 sm:px-4 md:px-8">
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<Login />} />
@@ -23,7 +25,7 @@ function App() {
         {/* Not Found */}
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </>
+    </div>
   );
 }
 

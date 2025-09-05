@@ -1,10 +1,12 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import Filters from "../components/Filters";
 
 export default function Home() {
   return (
     <div className="">
-      <Navbar />
+      <Hero />
+      <Filters />
     </div>
   );
 }
