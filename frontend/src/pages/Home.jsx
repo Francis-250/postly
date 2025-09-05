@@ -1,5 +1,10 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
-  return <div className="bg-black min-h-screen">Home</div>;
+  return (
+    <div className="">
+      <Navbar />
+    </div>
+  );
 }
