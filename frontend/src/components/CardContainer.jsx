@@ -6,7 +6,7 @@ const CardContainer = () => {
   const { blogData } = useContext(HomeContext);
 
   return (
-    <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-10  px-6 lg:px-25 lg:pl-25  ">
+    <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-10  md:pr-34  ">
       {/* maping postcard*/}
 
       {blogData?.slice(0, 4).map((blog, index) => {

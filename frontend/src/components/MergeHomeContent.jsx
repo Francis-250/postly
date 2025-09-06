@@ -6,7 +6,7 @@ import Sidebar from "./Sidebar";
 
 const MergeHomeContent = () => {
   return (
-    <div className="w-full flex bg-[#f9f5f0] min-h-screen  py-10 ">
+    <div className="w-full flex  min-h-screen  py-10 ">
       <CardContainer />
       <Sidebar />
     </div>
