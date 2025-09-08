@@ -5,7 +5,7 @@ import {
   getPostById,
   updatePost,
   deletePost,
-} from "../controller/post.controller.js";
+} from "../controller/postController.js";
 import { verifyToken } from "../middleware/verify.token.js";
 
 const postRouter = Router();

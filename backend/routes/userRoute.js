@@ -1,10 +1,10 @@
 import { Router } from "express";
-import { register, login } from "../controller/user.controller.js";
+import { register, login } from "../controller/userController.js";
 import { removeCookie } from "../middleware/verify.token.js";
 
 const userRouter = Router();
 
-userRouter.post("/register", register);
+userRouter.route("/register").post(register);
 userRouter.post("/login", login);
 userRouter.post("/", removeCookie);
 
